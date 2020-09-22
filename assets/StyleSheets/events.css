@@ -1,0 +1,112 @@
+*
+{
+     text-decoration: none;
+     margin: 0;
+     padding:0 ;
+     user-select: none;
+     color: white;
+     box-sizing: border-box;
+     font-family: 'Poppins', sans-serif;
+}
+body
+{
+     background:#181818;
+
+}
+html
+{
+     overflow-X:hidden;
+     background:#181818;
+}
+.sidebar
+{
+     width: 100%;
+     left: 0;
+     background: #212121;
+}
+.sidebar .text
+{
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    background: #181818;
+    letter-spacing: 1px;
+}
+
+#nav2 ul
+{
+    background: #181818;
+    height: auto;
+    width: 100%;
+    list-style: none;
+}
+#nav2 ul li
+{
+
+    border-bottom: 2px solid #212121;
+    overflow-X:hidden;
+}
+#nav2 ul li a
+{
+    color: white;
+    text-decoration:none ;
+    font-size: 18px;
+    padding-left: 30px;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border-left:3px solid transparent;
+    border-right:3px solid transparent;
+}
+#nav2 ul li a:hover
+{
+    color: greenyellow !important;
+    background: #181818;
+}
+a:hover
+{
+
+    text-decoration: none;
+}
+#nav2 ul ul
+{
+     position: static;
+     display: none;
+}
+#nav2 ul ul li
+{
+     line-height: 64px;
+     border-bottom: none;
+}
+#nav2 ul ul li a
+{
+     position: relative;
+     font-size: 17px ;
+     color: #e6e6e6;
+     padding-left: 80px;
+}
+#nav2 ul li a span
+{
+     position: relative;
+     right: 2%;
+     font-size:40px;
+     transition: transform 0.4s;
+}
+#nav2 ul li a:hover span
+{
+      transform:rotate(-180deg);
+}
+p
+{
+      word-wrap: break-word;
+}
+a i
+{
+    background: linear-gradient(45deg,orange,red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.8rem;
+    padding: 3.6rem 1rem 2rem;
+    transition:0.2s;
+}

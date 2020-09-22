@@ -1,0 +1,95 @@
+{% extends "form/base.html" %}
+{% load static %}
+{% block title %}Registration{% endblock %}
+{% block stysheet %}<link rel="stylesheet" type="text/css" href="{% static 'stylesheets/register.css' %}"> {% endblock %}
+
+{% block nav %}<nav class="navbar  navbar-expand-lg navbar-dark" style="background: #181818 !important;">{% endblock %}
+{% block content %}
+ <div id="err" class="text-center align-items-center">
+     {% if error %}
+            {{ error }}
+     {% endif %}
+ </div>
+<div id="con1">
+<br>
+<br>
+    <center>
+        <h1>
+            Register Here
+        </h1>
+    </center>
+<br>
+<!-- Form Start -->
+    <div  id="myform">
+        <form method="post">
+        {%  csrf_token %}
+        <div class="form-group">
+        <label for="formy">Event</label>
+            <select class="form-control" id="formy" name="event" title="choose at least one event from the list" required>
+                <option value="" selected disabled hidden>Events</option>
+                {% for ch in event %}
+                    {% if ch.current_status %}
+                    <option>{{ ch.event_name }}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="inp">Student Name</label>
+            <input type="text" class="form-control" id="inp" name="student_name" title="Enter Your Name"  placeholder="Student Name" required>
+        </div>
+        <div class="form-group">
+            <label for="inp">Email Id</label>
+            <input type="email" id="inp" name="email_p" class="form-control" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$" title = "Enter Valid Email" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+            <label for="inp">Mobile Number</label>
+            <input type="text" id="inp" name="mobile_number" class="form-control" title="Enter 10 'Digit' valid mobile Number" placeholder="Mobile Number" pattern="[0-9]{10}" required>
+        </div>
+        <div class="form-group">
+            <label for="inp">Roll No</label>
+            <input type="text" id="inp" name="roll_no" pattern="[0-9]{10}" class="form-control" title="Enter Valid Roll No" placeholder="Roll No" required>
+        </div>
+        <div class="form-group">
+        <label for="formy">Branch</label>
+            <select name="branch" id="formy"  class="form-control" title="Select Branch"  required>
+
+                {% for ch in branch %}
+                    <option>{{ ch }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <br>
+        <div class="form-group">
+           <center><input type="submit" class="btn btn-primary" id="btn1" name="Submit" value="Register Here"></center>
+        </div>
+        </form>
+    <!-- Form Ends -->
+    <br>
+    <br>
+    </div>
+</div>
+<!-- Social Media Icons -->
+<div class="container justify-content-center" style="display:flex;align-items: center;">
+          <a href="https://www.instagram.com/shelendra_220/" target="_blank">
+            <i class="fab fa-instagram" id="insta" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.github.com/shelendravashishtha2/" target="_blank">
+            <i class="fa fa-github" id="git" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/shelendra-vashishtha-246169184/" target="_blank">
+            <i class="fa fa-linkedin-square" id="link" aria-hidden="true"></i>
+          </a>
+          <a href="https://wa.me/919012008071" target="_blank">
+            <i class="fa fa-whatsapp" id="whats" aria-hidden="true"></i>
+          </a>
+</div>
+<!-- Developer Information -->
+<section class="container-fluid" style="border-top:2px solid blueviolet;padding-top: 10px;" id="con2">
+    <div class="row align-items-center">
+        <div class="col-md-12 text-center">
+            <p>&#169; Shelendra Vashishtha</p><p>&#169; Computer Science And Engineering</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

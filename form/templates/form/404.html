@@ -1,0 +1,21 @@
+{% extends 'form/base.html' %}
+{% block title %} 404 Error{% endblock %}
+{% block nav %}<nav class="navbar navbar-expand-lg navbar-dark" style="background: #181818 !important;">{% endblock %}
+{% block style %}
+    html
+    {
+        overflow:hidden;
+        background:#212121 !important;
+    }
+    body
+    {
+        background:#212121 !important;
+    }
+{% endblock %}
+{% block content %}
+    <div class="container-fluid justify-content-center text-center" style="margin-top:50px;min-height: 100vh;background: #212121;">
+        <h1 style="font-size: 4em; color: red !important;">
+            Error 404 : Page Not Found
+        </h1>
+    </div>
+{% endblock %}

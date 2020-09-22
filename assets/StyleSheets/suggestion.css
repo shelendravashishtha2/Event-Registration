@@ -1,0 +1,50 @@
+body
+{
+    height: auto;
+    background: url("/static/images/suggestions.jpeg") fixed;
+    background-size: cover;
+    overflow-x: hidden;
+}
+#myform
+{
+    overflow: hidden;
+    max-width: 540px;
+    margin: 0 auto;
+    color: #ffffff;
+    background: transparent;
+    min-height: auto;
+    line-height: 2;
+}
+label
+{
+    user-select: none;
+}
+.message
+{
+    position: absolute;
+    top: 60px;
+}
+#btn1:hover
+{
+    background: transparent;
+}
+@media only screen and (max-width: 700px) {
+    .message
+    {
+        position: absolute;
+        top: 54px;
+    }
+    #myform
+    {
+        margin: 5px;
+    }
+}
+a i
+{
+    background: -webkit-linear-gradient(45deg,yellow,#00e676,darkslateblue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5em;
+    padding: 2.8rem 1rem 2rem;
+    transition:0.2s;
+}

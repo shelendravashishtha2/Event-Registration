@@ -1,0 +1,65 @@
+html
+{
+    scroll-behavior: smooth;
+    background-color: #181818;
+}
+body
+{
+    background-color: #181818;
+}
+#loading
+{
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: #000000 url('/static/images/gif.gif') no-repeat center;
+      z-index: 99999;
+}
+nav a
+{
+    color: white !important;
+    font: 1.3em "Yeon Sung";
+}
+nav a:hover
+{
+    color: blueviolet !important;
+}
+a i:hover
+{
+    font-size: 3em;
+}
+#insta:hover
+{
+
+    background: -webkit-linear-gradient(#F58529,#FEDA77, #dd2a7b,#8134AF,#515BD4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    text-underline-style: none;
+}
+
+#link:hover
+{
+    background:  #0077b5;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#whats:hover
+{
+    background:  #00e676;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#twitter:hover
+{
+    background:  cornflowerblue;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#git:hover
+{
+    background:  #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

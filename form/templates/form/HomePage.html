@@ -1,0 +1,198 @@
+{% extends "form/base.html" %}
+{% load static %}
+{% block title %} Home{% endblock %}
+{% block stysheet %}
+
+    <link href='https://fonts.googleapis.com/css?family=Grandstander' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/home.css' %}"> {% endblock %}
+{% block style %}
+   {% if status %}
+#marquee
+{
+    display:visible;
+}
+#particles-js
+{
+    margin-top:60px;
+}
+    {% else %}
+#marquee
+{
+    display:none;
+}
+    {% endif %}
+
+{% endblock %}
+{% block nav %}
+    <nav class="navbar navbar-expand-md fixed-top navbar-dark" style="background: #181818 !important;">
+{% endblock %}
+{% block content %}
+    <div id="marquee" style="background: #212121;color:#ffffff;">
+    <marquee style="color: white">
+        {% for ch in error %}
+            {% if ch.warn %}
+                   &#10148; {{ ch.event_name }} : {{ ch.warn }}
+            {% endif %}
+        {% endfor %}
+    </marquee>
+    </div>
+      <!-- Welcome Body Container -->
+        <div class="container-fluid justify-content-center text-center" id="con1">
+          <div id="particles-js"></div>
+          <div class="col-12" id="info">
+              <h1  id="open">
+                  Welcome To <span style="color: #00f100;font-weight: 600;">Coding Club</span>
+              </h1>
+              <br>
+              <h1 id="dept">
+                  <span style="color: #00f100;font-weight: 600;">CSE DEPT. </span><a href="http://www.niet.co.in/" target="_blank" style="text-decoration: none;">NIET</a>
+              </h1>
+              <br>
+                  <h1 id="place">
+                    Gr. NOIDA
+              </h1>
+              <br>
+              <a  href="#con2">
+                <button class="btn btn-primary" id="btn1">About Us</button>
+              </a>
+        </div>
+        </div>
+        <!-- welcome body Ends -->
+        <!-- About Body Starts -->
+            <div class="container"  id="con2">
+        <div class="row text-center justify-content-center" id="pad">
+            <div class="col-lg-12">
+                <h1>About Us</h1>
+            </div>
+        </div>
+          <div class="row text-center" id="row1">
+            <div class="col-lg-6" style="padding-top: 2rem;" id="r1">
+              <h1 class="text-center head">CSE DEPT</h1><br>
+              <p>
+                  The Department of Computer Science and Engineering at NIET is renowned for its cutting edge research and imparting state-of-the-art education. The department attracts the bright students and faculty members.
+
+
+              </p>
+            </div>
+           <div class="col-lg-6" style="padding-top: 2rem;" id="r2">
+              <h1 class="text-center head">DEPT MISSION</h1><br>
+                <p>To provide life-long learning environment to strengthen core competencies, innovation, problem-solving skills, ethical values and social responsibility.
+                <br>To establish industry institute interaction and collaborations to prepare the students to adopt corporate culture with leadership and managerial skills.
+                </p>
+            </div>
+          </div>
+          <div class="row text-center" id="row2">
+            <div class="col-lg-6" style="padding-top: 2rem;" id="r2">
+              <h1 class="text-center head">CSE DEPT</h1><br>
+                <p>
+                    To become a prominent department of technical excellence in the field of computing and information system, providing an intellectual, innovative, and inspirational environment to produce competent professionals of the highest ethics equipped with future skills, research potential and attitude to create startups for society.
+              </p>
+            </div>
+           <div class="col-lg-6" style="padding-top: 2rem;" id="r1">
+              <h1 class="text-center head">Our Club</h1><br>
+                <p>
+                    Our Club is dedicated to motivate Students of not only CSE department but of all departments towards the programming. This is 21st century and we can say it more or less the age of programming, our club is dedicated to provide help and platform to students to show up their programming skills by organising competitive events and Required Workshops.
+                </p>
+            </div>
+          </div>
+        </div>
+        <!-- About Body Ends -->
+        <!-- Get In Touch Icons -->
+        <div class="container justify-content-center" style="display:flex;align-items: center;">
+          <a href="https://www.instagram.com/shelendra_220/" target="_blank">
+            <i class="fab fa-instagram" id="insta" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.github.com/shelendravashishtha2/" target="_blank">
+            <i class="fa fa-github" id="git" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/shelendra-vashishtha-246169184/" target="_blank">
+            <i class="fa fa-linkedin-square" id="link" aria-hidden="true"></i>
+          </a>
+          <a href="https://wa.me/919012008071" target="_blank">
+            <i class="fa fa-whatsapp" id="whats" aria-hidden="true"></i>
+          </a>
+        </div>
+        <!-- Icon Container Ends -->
+        <!-- Copyright  -->
+        <div class="container-fluid text-center justify-item-center align-item-center" id="summary">
+        <div class="row">
+            <div class="col-md-12" id="contact">
+                <h1 style="color: greenyellow;">Contact Us</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h3>
+                    First Field
+                </h3>
+                <h5>
+                    First Person
+                </h5>
+                <p>
+                    <a href="https://www.instagram.com/shelendra_220/" target="_blank">
+                         <i class="fab fa-instagram" id="insta" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.github.com/shelendravashishtha2/" target="_blank">
+                        <i class="fa fa-github" id="git" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/shelendra-vashishtha-246169184/" target="_blank">
+                        <i class="fa fa-linkedin-square" id="link" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://wa.me/919012008071" target="_blank">
+                        <i class="fa fa-whatsapp" id="whats" aria-hidden="true"></i>
+                    </a>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h3>
+                    Second Field
+                </h3>
+                <h5>
+                    Second Person
+                </h5>
+                <p>
+                    <a href="https://www.instagram.com/shelendra_220/" target="_blank">
+                         <i class="fab fa-instagram" id="insta" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.github.com/shelendravashishtha2/" target="_blank">
+                        <i class="fa fa-github" id="git" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/shelendra-vashishtha-246169184/" target="_blank">
+                        <i class="fa fa-linkedin-square" id="link" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://wa.me/919012008071" target="_blank">
+                        <i class="fa fa-whatsapp" id="whats" aria-hidden="true"></i>
+                    </a>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h3>
+                     Third Field
+                </h3>
+                <h5>
+                    Third Person
+                </h5>
+                <p>
+                    <a href="https://www.instagram.com/shelendra_220/" target="_blank">
+                         <i class="fab fa-instagram" id="insta" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.github.com/shelendravashishtha2/" target="_blank">
+                        <i class="fa fa-github" id="git" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/shelendra-vashishtha-246169184/" target="_blank">
+                        <i class="fa fa-linkedin-square" id="link" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://wa.me/919012008071" target="_blank">
+                        <i class="fa fa-whatsapp" id="whats" aria-hidden="true"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+        <div class="container justify-content-center text-center" id="cpy" style="color:#ffffff;">
+          &#169; Designed and Developed By : Shelendra Vashishtha
+        </div>
+        <script type="text/javascript" src="{% static 'javascript/particles.js'%}"></script>
+        <script type="text/javascript" src="{% static 'javascript/app.js' %}"></script>
+{% endblock %}

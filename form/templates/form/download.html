@@ -1,0 +1,68 @@
+{% extends "form/base.html" %}
+{% load static %}
+{% block title %}Download Data{% endblock %}
+{% block stysheet %}
+    <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/download.css' %}">
+{% endblock %}
+{% block nav %}<nav class="navbar navbar-expand-lg navbar-dark" style="background: #181818 !important;">{% endblock %}
+{% block content %}
+<div id="con1" >
+<br>
+<br>
+    <center>
+        <h1>
+            Download Student Data
+        </h1>
+    </center>
+<br>
+    <!-- Form start -->
+    <div  id="myform">
+        <form method="post">
+        {%  csrf_token %}
+        <div class="form-group text-center">
+            <label for="inp">Event Code</label>
+            <input type="text" class="form-control" id="inp" title="Enter Valid event code here" name="eve_code" placeholder="Enter Event Code" required>
+        </div>
+        <br>
+        <div class="form-group">
+           <center><input type="submit" class="btn btn-primary" id="btn1" name="Submit" value="Submit"></center>
+        </div>
+        </form>
+    <br>
+    <br>
+    </div>
+</div>
+    <!-- Error Start-->
+<div class="container-fluid justify-content-center text-center" >
+        <div class="row">
+            <div class="col-lg-12" style="color: red;">
+                     {% if error %}
+                        <p>{{ error }}</p>
+                     {% endif %}
+            </div>
+        </div>
+</div>
+    <!-- Social Media Icons -->
+<div class="container justify-content-center" style="display:flex;align-items: center;">
+          <a href="https://www.instagram.com/shelendra_220/" target="_blank">
+            <i class="fab fa-instagram" id="insta" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.github.com/shelendravashishtha2/" target="_blank">
+            <i class="fa fa-github" id="git" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/shelendra-vashishtha-246169184/" target="_blank">
+            <i class="fa fa-linkedin-square" id="link" aria-hidden="true"></i>
+          </a>
+          <a href="https://wa.me/919012008071" target="_blank">
+            <i class="fa fa-whatsapp" id="whats" aria-hidden="true"></i>
+          </a>
+</div>
+    <!-- Developer Information -->
+<section class="container-fluid" style="border-top:2px solid blueviolet;padding-top: 10px;" id="con2">
+    <div class="row align-items-center">
+        <div class="col-md-12 text-center">
+            <p>&#169; Shelendra Vashishtha</p><p>&#169; Computer Science And Engineering</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

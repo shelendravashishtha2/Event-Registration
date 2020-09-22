@@ -1,0 +1,112 @@
+{% extends 'form/base.html' %}
+{% load static %}
+{% block title %}Event{% endblock %}
+{% block stysheet %}<link rel="stylesheet" type="text/css" href="{% static 'stylesheets/events.css' %}"> {% endblock %}
+{% block style %}
+    {% for ch in event %}
+    #nav2 ul .a-{{ forloop.counter }}-show.show
+    {
+        display: block;
+    }
+    {% endfor %}
+{% endblock %}
+{% block nav %}<nav class="navbar fixed-top  navbar-expand-lg navbar-dark" style="background: #181818 !important;">{% endblock %}
+{% block content %}
+    <!-- Event Card -->
+<div class="container" style="margin-top:70px;min-height:100vh;height:auto;background:#181818;" id="procon">
+    <nav class="sidebar" id = "nav2">
+        <ul class="navbar-nav">
+            <li class="text-center nav-item" style="padding-bottom:40px;overflow: hidden;">
+                <a href="#" class="nav-link"><span style="font-size: 2em;">Events Chart</span></a>
+            </li>
+            {% for ch in event reversed %}
+                <li id="a-{{ forloop.counter }}" class="nav-item">
+                    <a  class="a-{{ forloop.counter }}-btn nav-link" style="border-left-color: red;border-right-color: red;"><span style="color: blue;">&#9758;</span>   {{ ch }}  ||  {{ ch.pub_date.date }}  ||  {{ ch.pub_date.time }}</a>
+                <ul class="a-{{ forloop.counter }}-show">
+                    <li>
+                        <div class="container">
+                             <div class="row justify-content-center text-center" id="row1">
+                                 <div class="col-lg-12 text-center" style="padding-top: 2rem;" id="r1">
+                                 {% if ch.drive_link %}
+                                     <a href="{{ ch.drive_link }}" target="_blank"><h1 class="text-center head" style="color: dodgerblue;">{{ ch.event_name }}<sup><i class="fa fa-link" style="font-size: 0.6em;color: dodgerblue;"></i></sup></h1></a>
+                                 {% else %}
+                                     <h1 class="text-center head" style="color: red;">{{ ch.event_name }}</h1>
+                                 {% endif %}
+                                     <br>
+                                     <p><span style="color: red;">Date and Time</span> : {{ ch.pub_date }}<span style="color: red;"> Current Event Status</span> : {% if ch.current_status %}Scheduled{% else %}Held{% endif %}</p>
+                                     {% if ch.warn %}<p>Update :<span style="color:greenyellow;"> {{ ch.warn }}</span></p>{% endif %}
+                                    <div class="container-fluid text-center">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                    <p>
+                                                        {{ ch.description|safe }}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                    </div>
+                                 </div>
+                             </div>
+                        <br>
+                        <br>
+                            <div class="row text-center">
+                                <div class="col-lg-4">
+                                    {% if ch.winner %}
+                                        <h3 style="color: red;">Winner</h3>
+                                        <p>{{ ch.winner }}</p>
+                                    {% endif %}
+                                </div>
+                                <div class="col-lg-4">
+                                    {% if ch.first_runner %}
+                                        <h3 style="color: red;">First Runner UP</h3>
+                                        <p>{{ ch.first_runner }}</p>
+                                    {% endif %}
+                                </div>
+                                <div class="col-lg-4">
+                                    {% if ch.second_runner %}
+                                        <h3 style="color: red;">Second Runner UP</h3>
+                                        <p>{{ ch.second_runner }}</p>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </li>
+            {% endfor %}
+        </ul>
+    </nav>
+</div>
+    <!-- Social Media Icons -->
+    <div class="container-fluid justify-content-center" style="margin-top:50px;background:linear-gradient(#212121,#333333);display:flex;align-items: center;">
+          <a href="https://www.instagram.com/shelendra_220/" target="_blank">
+            <i class="fab fa-instagram" id="insta" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.github.com/shelendravashishtha2/" target="_blank">
+            <i class="fa fa-github" id="git" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/shelendra-vashishtha-246169184/" target="_blank">
+            <i class="fa fa-linkedin-square" id="link" aria-hidden="true"></i>
+          </a>
+          <a href="https://wa.me/919012008071" target="_blank">
+            <i class="fa fa-whatsapp" id="whats" aria-hidden="true"></i>
+          </a>
+</div>
+    <!-- Developer Information -->
+<section class="container-fluid" style="background:#212121;padding-top: 10px;" id="con2">
+    <div class="row align-items-center">
+        <div class="col-md-12 text-center">
+            <p>&#169; Shelendra Vashishtha</p><p>&#169; Computer Science And Engineering</p>
+        </div>
+    </div>
+</section>
+<!-- Java Script Toggle -->
+<script>
+    {% for ch in event %}
+    $('.a-{{ forloop.counter }}-btn').click(function ()
+    {
+        $('nav ul .a-{{ forloop.counter }}-show').toggleClass("show");
+    });
+    {% endfor %}
+</script>
+{% endblock %}

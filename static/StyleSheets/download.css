@@ -1,0 +1,105 @@
+* 
+{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+html
+{
+      overflow-x: hidden;
+}
+
+body 
+{
+      overflow-x: hidden;
+      background: #181818;
+      font-family:  sans-serif;
+      height: auto;
+}
+#con1
+{
+      user-select: none;
+      background: url("/static/images/cse_background.jpg") no-repeat fixed center;
+      background-size: cover;
+      height: 100%;
+}
+select
+{
+      font-family: sans-serif ;
+      padding: 15px;
+      transition: 0.5s;
+}
+select:hover,#inp:hover,select:focus,#inp:focus
+{
+      background-color:blueviolet;
+      color:#ffffff;
+}
+input:hover::-webkit-input-placeholder,input:focus::-webkit-input-placeholder
+{
+      color: #ffffff;
+      opacity: 1;
+}
+:hover::placeholder
+{
+      color:#ffffff;
+      opacity: 1;
+}
+#inp
+{
+      font-family: sans-serif;
+      font-weight: bold;
+      padding: 15px;
+      transition: 0.5s;
+}
+#err
+{
+      font-size: 1.5em;
+      color:red;
+      background-color: #192024;
+}
+h1
+{
+      color: #ffffff;
+}
+#con
+{
+      background: #181818;
+}
+a i
+{
+      background: linear-gradient(45deg,orange,pink);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 2.8rem;
+      padding: 3.6rem 1rem 2rem;
+      transition:0.2s;
+}
+#con2
+{
+      margin: 0;
+      padding: 0;
+      background: #181818;
+      color:#ffffff;
+}
+a
+{
+      color:#ffffff !important;
+}
+a:hover
+{
+      color:blueviolet;
+}
+#myform
+{
+      max-width: 540px;
+      margin: 0 auto;
+      color: #ffffff;
+}
+#btn1
+{
+      background:blueviolet;
+}
+#btn1:hover
+{
+      background:transparent;
+}
