@@ -108,4 +108,14 @@ a:hover
     {
         margin: 5px;
     }
+    body
+    {
+        background: #181818 url("/static/images/cse_background.jpg") no-repeat;
+        background-size: cover;
+    }
+    #con1
+    {
+        background: #181818 url("/static/images/cse_background.jpg") no-repeat;
+        background-size: cover;
+    }
 }

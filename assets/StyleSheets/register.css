@@ -21,9 +21,10 @@ body {
 }
 #con1
 {
-    background: #181818 url("/static/images/cse_background.jpg") no-repeat fixed center;
+    background: #181818 url("/static/images/cse_background.jpg") no-repeat fixed;
     user-select: none;
     overflow-x: hidden;
+    background-size: cover;
     height: 100%;
 }
 select
@@ -106,5 +107,15 @@ a:hover
     #myform
     {
         margin: 5px;
+    }
+    body
+    {
+        background: #181818 url("/static/images/cse_background.jpg") no-repeat;
+        background-size: cover;
+    }
+    #con1
+    {
+        background: #181818 url("/static/images/cse_background.jpg") no-repeat;
+        background-size: cover;
     }
 }

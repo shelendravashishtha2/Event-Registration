@@ -1,7 +1,7 @@
 body
 {
     height: auto;
-    background: url("/static/images/suggestions.jpeg") fixed;
+    background: url("/static/images/suggestions.jpeg") no-repeat fixed;
     background-size: cover;
     overflow-x: hidden;
 }
@@ -37,6 +37,11 @@ label
     #myform
     {
         margin: 5px;
+    }
+    body
+    {
+        background: url("/static/images/suggestions.jpeg") no-repeat;
+        background-size: cover;
     }
 }
 a i
