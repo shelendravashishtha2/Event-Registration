@@ -1,7 +1,8 @@
 # Create your models here.
+import datetime
+
 from django.db import models
 from django.utils.timezone import now
-import datetime
 
 
 # Event Models

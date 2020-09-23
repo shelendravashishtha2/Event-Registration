@@ -70,6 +70,7 @@ a i
 #r1,#r2
 {
     user-select: none;
+    border-radius: 10px;
 }
 #r1
 {
@@ -172,6 +173,10 @@ nav
         letter-spacing: 0.1em;
         height: auto;
         top: 30%;
+    }
+    #r1,#r2
+    {
+        border-radius: 0;
     }
 
 }
