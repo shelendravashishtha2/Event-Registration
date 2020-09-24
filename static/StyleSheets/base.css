@@ -31,7 +31,7 @@ a i:hover
 #insta:hover
 {
 
-    background: -webkit-linear-gradient(#F58529,#FEDA77, #dd2a7b,#8134AF,#515BD4);
+    background: -webkit-linear-gradient(#F58529,#FEDA77, #dd2a7b,#8134AF,#515BD4) center;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-decoration: none;

@@ -33,13 +33,44 @@ a i
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 2.5em;
-    padding: 2.8rem 1rem 2.5rem;
+    padding: 2.5rem 1rem 2.5rem;
     transition:0.2s;
 }
 #summary
 {
     background: url("/static/Images/detail.jpg") fixed no-repeat;
     background-size: cover;
+    backdrop-filter:blur(100px);
+}
+#cont:after
+{
+    content: '';
+    display: flex;
+    height: 2px;
+    width: 0;
+    justify-items: center;
+    justify-content: center;
+    background: chartreuse;
+    transition: 0.4s;
+}
+#cont:hover::after
+{
+    width: 10%;
+}
+#cont:before
+{
+    content: '';
+    display: flex;
+    height: 2px;
+    width: 0;
+    justify-items: center;
+    justify-content: center;
+    background: blueviolet;
+    transition: 0.4s;
+}
+#cont:hover::before
+{
+    width: 50%;
 }
 #contact,h3
 {
@@ -86,7 +117,7 @@ a i
 }
 #r2:hover
 {
-    background:#212121;
+    background:#262626;
     border: 2px solid #ffffff;
 }
 #r2 h1,#r1 h1
@@ -123,9 +154,24 @@ a i
 #pad
 {
     padding-top:80px;
-    padding-bottom:10px;
+    padding-bottom:40px;
     color :blueviolet;
     font-size:3em;
+}
+#pad:after
+{
+    content: '';
+    display: flex;
+    justify-content:center ;
+    justify-items: center;
+    width: 0;
+    height: 2px;
+    background: blueviolet;
+    transition: 0.5s;
+}
+#pad:hover::after
+{
+    width: 10%;
 }
 #particles-js
 {
@@ -156,17 +202,18 @@ nav
 }
 #open
 {
-    font-family:'Aldrich';
+    font-family: 'Aldrich', serif;
 }
 #dept
 {
-    font-family: 'Grandstander';
+    font-family: 'Grandstander', serif;
 }
 #place
 {
-    font-family: Yeon Sung;
+    font-family: Yeon Sung, serif;
 }
-@media only screen and (max-width: 740px){
+@media only screen and (max-width: 740px)
+{
     #info
     {
         position: absolute;
