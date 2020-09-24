@@ -24,17 +24,17 @@
                     <a  class="a-{{ forloop.counter }}-btn nav-link" style="border-left-color: red;border-right-color: red;"><span style="color: blue;">&#9758;</span>   {{ ch }}  ||  {{ ch.pub_date.date }}  ||  {{ ch.pub_date.time }}</a>
                 <ul class="a-{{ forloop.counter }}-show">
                     <li>
-                        <div class="container">
+                        <div class="container-fluid">
                              <div class="row justify-content-center text-center" id="row1">
                                  <div class="col-lg-12 text-center" style="padding-top: 2rem;" id="r1">
                                  {% if ch.drive_link %}
-                                     <h1 onclick="window.open('{{ ch.drive_link }}')" style="color: dodgerblue;">{{ ch.event_name }}<sup><i class="fa fa-link" style="font-size: 0.6em;color: orange;"></i></sup></h1>
+                                     <h1 onclick="window.open('{{ ch.drive_link }}')" style="cursor:pointer;color: dodgerblue;">{{ ch.event_name }} <sup><i class="fa fa-link" style="font-size: 0.6em;color: orange;"></i></sup></h1>
                                  {% else %}
                                      <h1 class="text-center head" style="color: #3ca52a;">{{ ch.event_name }}</h1>
                                  {% endif %}
-                                     <p><span style="color: red;">Date and Time</span> : {{ ch.pub_date }}<span style="color: red;"> Current Event Status</span> : {% if ch.current_status %}Scheduled{% else %}Held{% endif %}</p>
-                                     {% if ch.event_venue %}<p style="border-top:2px solid #609ab6;border-bottom: 2px solid #609ab6;"><span style="color:yellow">Event Venue</span>  : {{ ch.event_venue }}</p>{% endif %}
-                                     {% if ch.warn %}<p>Update :<span style="color:greenyellow;"> {{ ch.warn }}</span></p>{% endif %}
+                                     <p><span style="color: #cec400;">Date and Time</span> : {{ ch.pub_date }}<span style="color: #cec400;"> Current Event Status</span> : {% if ch.current_status %}Scheduled{% else %}Held{% endif %}</p>
+                                     {% if ch.event_venue %}<p style="border-top:2px solid #609ab6;border-bottom: 2px solid #609ab6;"><span style="color:#cec400">Event Venue</span>  : {{ ch.event_venue }}</p>{% endif %}
+                                     {% if ch.warn %}<p><span style="color: #477c90">Update</span> :<span style="color:#84b734;"> {{ ch.warn }}</span></p>{% endif %}
                                     <div class="container-fluid text-center">
                                         <div class="row">
                                             <div class="col-lg-12">
