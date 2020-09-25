@@ -47,7 +47,7 @@ a i
     content: '';
     display: flex;
     height: 2px;
-    width: 0;
+    width: 10%;
     justify-items: center;
     justify-content: center;
     background: chartreuse;
@@ -62,15 +62,11 @@ a i
     content: '';
     display: flex;
     height: 2px;
-    width: 0;
+    width: 50%;
     justify-items: center;
     justify-content: center;
     background: blueviolet;
     transition: 0.4s;
-}
-#cont:hover::before
-{
-    width: 50%;
 }
 #contact,h3
 {
@@ -162,7 +158,7 @@ a i
     }
     #r1:hover .head:after,#r2:hover .head:after
     {
-        width: 80%;
+        width: 60%;
     }
 }
 #r2:hover p,#r1:hover p
