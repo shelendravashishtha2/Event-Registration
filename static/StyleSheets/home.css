@@ -133,7 +133,38 @@ a i
 {
     color:#edecd6;
 }
+#r1 .head,#r2 .head
+{
+    display: block;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+@media only screen and (min-width: 800px){
 
+    #r2 .head:after,#r1 .head:after
+    {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        align-content: center;
+        align-items: center;
+        height: 2px;
+        width: 0;
+        transition: 1s;
+        background:#edecd6;
+    }
+    #r1:hover .head:after,#r2:hover .head:after
+    {
+        width: 80%;
+    }
+}
 #r2:hover p,#r1:hover p
 {
     color:greenyellow;
