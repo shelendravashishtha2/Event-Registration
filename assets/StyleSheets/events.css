@@ -4,7 +4,7 @@
      margin: 0;
      padding:0 ;
      user-select: none;
-     color: white;
+     color: #edecd6;
      box-sizing: border-box;
      font-family: 'Poppins', sans-serif;
 }
@@ -26,13 +26,17 @@ html
 }
 .sidebar .text
 {
-    color: white;
+    color: #edecd6;
     font-size: 25px;
     text-align: center;
     background: #181818;
     letter-spacing: 1px;
 }
-
+a h1
+{
+    position: relative;
+    left: 0;
+}
 #nav2 ul
 {
     background: #181818;
@@ -48,7 +52,7 @@ html
 }
 #nav2 ul li a
 {
-    color: white;
+    color: #edecd6;
     text-decoration:none ;
     font-size: 18px;
     padding-left: 30px;
@@ -83,7 +87,7 @@ a:hover
 {
      position: relative;
      font-size: 17px ;
-     color: #e6e6e6;
+     color: #edecd6;
      padding-left: 80px;
 }
 #nav2 ul li a span

@@ -1,11 +1,9 @@
-from django.shortcuts import render
-
 # Create your views here.
 import csv
 # Create your views here.
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
-from .models import Event, Student, Branch, Blog, AvailableFeatures
+from .models import Event, Student, Branch
 from django.views import View
 from .forms import BlogForm
 from django.core.mail import send_mail
