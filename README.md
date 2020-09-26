@@ -34,7 +34,7 @@
   ### Edit in Templates
   ```sh
     - Edit Various Social Media Links
-    - Edit Metor's Details on HomePage.html
+    - Edit Mentor's Details on HomePage.html
   ```
 
 # COPYRIGHT DETAILS
