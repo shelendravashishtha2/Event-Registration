@@ -46,9 +46,8 @@ class CheckView(View):
                         mobile_number=mobile_number, roll_no=roll_no, branch=Branch.objects.get(branch_name=branch))
             s.save()
             message = send_mail("Successfully Registered for Event",
-                                "You Have been Successfully Registered for the " + e.get(
-                                    event_name=event).event_name + "\n We want you to be present half hour before "
-                                                                   "event will be started\n" + "Event Timing :" +
+                                "You Have been Successfully Registered for " + e.get(
+                                    event_name=event).event_name + "\n" + "Event Timing :" +
                                 str(e.get(
                                     event_name=event).pub_date.date()) + " " + str(e.get(
                                     event_name=event).pub_date.time()) + "\nEvent Venue: " + e.get(
