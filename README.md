@@ -20,7 +20,7 @@
 
 ## How To Use
 
-  ### Edit in Settings
+  ### Edit in Settings.Py
   - EMAIL_HOST_USER = 'your gmail user_name'
   - EMAIL_HOST_PASSWORD = 'your gmail password'
 ```sh
@@ -34,7 +34,7 @@
   ### Edit in Templates
   ```sh
     - Edit Various Social Media Links
-    - Edit Metor's Details on HomePage.html
+    - Edit Mentor's Details on HomePage.html
   ```
 
 # COPYRIGHT DETAILS
