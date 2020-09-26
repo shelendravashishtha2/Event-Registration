@@ -7,18 +7,17 @@
     <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/home.css' %}"> {% endblock %}
 {% block style %}
-   {% if status %}
+{% if status %}
 #marquee
 {
     display:visible;
 }
-    {% else %}
+{% else %}
 #marquee
 {
     display:none;
 }
-    {% endif %}
-
+{% endif %}
 {% endblock %}
 {% block nav %}
     <nav class="navbar navbar-expand-md fixed-top navbar-dark" style="background: #181818 !important;">
@@ -86,7 +85,7 @@
               </p>
             </div>
            <div class="col-lg-6" style="padding-top: 2rem;" id="r1">
-              <h1 class="text-center head">Our Club</h1><br>
+              <h1 class="text-center head">CODING CLUB</h1><br>
                 <p>
                     Our Club is dedicated to motivate Students of not only CSE department but of all departments towards the programming. This is 21st century and we can say it more or less the age of programming, our club is dedicated to provide help and platform to students to show up their programming skills by organising competitive events and Required Workshops.
                 </p>
