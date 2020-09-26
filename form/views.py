@@ -47,7 +47,7 @@ class CheckView(View):
             s.save()
             message = send_mail("Successfully Registered for Event",
                                 "You Have been Successfully Registered for " + e.get(
-                                    event_name=event).event_name + "\n" + "Event Timing :" +
+                                    event_name=event).event_name + " \n" + "Event Timing :" +
                                 str(e.get(
                                     event_name=event).pub_date.date()) + " " + str(e.get(
                                     event_name=event).pub_date.time()) + "\nEvent Venue: " + e.get(
