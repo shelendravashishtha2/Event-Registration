@@ -20,7 +20,7 @@
 
 ## How To Use
 
-  ### Edit in Settings
+  ### Edit in Settings.Py
   - EMAIL_HOST_USER = 'your gmail user_name'
   - EMAIL_HOST_PASSWORD = 'your gmail password'
 ```sh
