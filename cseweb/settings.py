@@ -120,7 +120,7 @@ STATIC_ROOT = os.path.join('assets')
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 465
-EMAIL_HOST_USER = "shia.sharma123@gmail.com"
-EMAIL_HOST_PASSWORD = "Shelendra@12354"
+EMAIL_HOST_USER = " "
+EMAIL_HOST_PASSWORD = " "
 EMAIL_USE_SSL = True
 EMAIL_USE_TSL = False
