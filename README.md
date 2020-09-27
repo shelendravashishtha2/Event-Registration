@@ -15,6 +15,8 @@
   - Suggestion Facility for students to register Query or suggest event.
   - Dynamic Feature Links Navbar 
   - Search and Filter Facility based on various fields in Admin Portal 
+  - HTML tag enabled Event Description Section
+  - Drive Link section for Event's photographs
   - Sends Email on Student's Successful registration including event venue and timing Details
 ```
 
