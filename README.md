@@ -4,7 +4,9 @@
 ## clone this Repository 
 
    [https://github.com/shelendravashishtha2/Event-Registration.git](https://github.com/shelendravashishtha2/Event-Registration.git)
-      
+
+# Hosted At
+  https://devops.pythonanywhere.com      
 ## Features
 
 ```sh
@@ -47,7 +49,7 @@
     
    [https://codetronics.pythonanywhere.com](https://codetronics.pythonanywhere.com)
  
-    
+  
   ## Frontend and Backend Designed and Developed By : 
    
         Shelendra Vashishtha
